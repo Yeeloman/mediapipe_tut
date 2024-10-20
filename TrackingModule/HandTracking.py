@@ -1,11 +1,16 @@
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import cv2
 import mediapipe as mp
 import time
+from TrackingModule.config import BaseDetector
 
 
 class handDetector():
-    WEBCAM_URL = "http://192.168.11.101:8080/video"
-    def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5, cam=WEBCAM_URL):
+    def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5, cam=BaseDetector.WEBCAM_URL):
         self.mode = mode
         self.maxHands = maxHands
         self.detectionCon = detectionCon

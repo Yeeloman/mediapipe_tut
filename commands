@@ -1,8 +1,10 @@
-xhost +local:docker
+~!/usr/bin/env bash
 
+xhost +local:docker
 
 docker run -it --rm \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v "$(pwd)":/workspace \
     my-python-dev
 

@@ -1,3 +1,0 @@
-docker login
-docker tag my-python-dev your_dockerhub_username/my-python-dev:latest
-docker push your_dockerhub_username/my-python-dev:latest
